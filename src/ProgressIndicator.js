@@ -21,7 +21,7 @@ function getColor(index, currentStep, skippedSteps, backgroundColor) {
   }
 }
 
-class ProgressIndicator extends React.Component{
+class ProgressIndicator extends Component{
   constructor(props) {
       super(props);
       this.state = {currentStep:this.props.currentStep};
