@@ -12,7 +12,7 @@ var circleStyle = {
   borderColor: '#000',
 };
 
-class Circle extends React.Component{
+class Circle extends Component {
   render() {
     let customColors = {
       backgroundColor: this.props.color,

@@ -9,7 +9,7 @@ let lineStyle = {
   zIndex: -1,
 };
 
-class Line extends React.Component{
+class Line extends Component {
   render() {
     let customColors = {
       backgroundColor: this.props.color,

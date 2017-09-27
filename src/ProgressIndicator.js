@@ -21,7 +21,7 @@ function getColor(index, currentStep, skippedSteps) {
   }
 }
 
-class ProgressIndicator extends React.Component{
+class ProgressIndicator extends Component {
   render() {
     let circles = [];
     for (let i = 0; i < this.props.numberSteps; i++) {
