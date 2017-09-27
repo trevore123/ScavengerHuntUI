@@ -15,7 +15,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <ProgressIndicator backgroundColor="#393939" numberSteps={9} currentStep={9} skippedSteps={[]}/>
+        <ProgressIndicator backgroundColor="#393939" numberSteps={9} currentStep={0} skippedSteps={[2]}/>
       </div>
     );
   }

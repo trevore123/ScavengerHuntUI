@@ -3,6 +3,13 @@ import Circle from './Circle';
 import Line from './Line';
 
 class ProgressIndicator extends React.Component{
+
+  constructor(props) {
+      super(props);
+      this.state = {currentStep:this.props.currentStep};
+      this.incrementStep = this.incrementStep.bind(this);
+  }
+
   getColor(index, skippedSteps, currentStep){
     if(index > currentStep) {
       return this.props.backgroundColor;
@@ -15,10 +22,16 @@ class ProgressIndicator extends React.Component{
     }
   }
 
+  incrementStep(){
+    this.setState({
+      currentStep:this.state.currentStep+1
+    });
+  }
+
   render(){
     let circles = [];
     for (var i=0; i < this.props.numberSteps; i++) {
-      var color = this.getColor(i, this.props.skippedSteps, this.props.currentStep);
+      var color = this.getColor(i, this.props.skippedSteps, this.state.currentStep);
       circles.push(<Circle borderColor={this.props.backgroundColor} color={color}/>);
     }
     var Style = {
@@ -28,7 +41,7 @@ class ProgressIndicator extends React.Component{
       position:"relative"
     };
     return (
-      <div style={{...Style,...this.props.style}}>
+      <div style={{...Style,...this.props.style}} onClick={this.incrementStep}>
       {circles}
       <Line bgColor={this.props.backgroundColor}/>
       </div>
