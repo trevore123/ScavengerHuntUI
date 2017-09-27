@@ -18,7 +18,7 @@ class App extends Component {
           style={{'width': '35%'}} 
           backgroundColor="#393939" 
           numberSteps={9} 
-          currentStep={9} 
+          currentStep={0} 
           skippedSteps={[]}
         />
       </div>
