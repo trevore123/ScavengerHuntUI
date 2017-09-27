@@ -3,7 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import ProgressIndicator from './ProgressIndicator'
 
-
 class App extends Component {
   render() {  
     return (
@@ -20,6 +19,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
