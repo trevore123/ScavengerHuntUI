@@ -3,6 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 import TeamDisplay from './TeamDisplay'
 
+import openSocket from 'socket.io-client';
+let socket = openSocket('http://localhost:12345');
+
+socket.on('status-update', function(data) {
+  console.log('event recieved.')
+  console.log(data)
+});
+
 class App extends Component {
   render() {  
     return (
