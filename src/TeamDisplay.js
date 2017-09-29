@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ProgressIndicator from './ProgressIndicator';
+import * as colors from './`colors';
 
 let indicatorStyle = {
   // 'width': '100%',
@@ -26,7 +27,7 @@ class TeamDisplay extends Component {
         <p>Red Team</p>
         <ProgressIndicator 
           style={indicatorStyle} 
-          backgroundColor="#114144" 
+          backgroundColor={colors.blackBlue}
           numberSteps={9} 
           currentStep={this.state.currentStep} 
           skippedSteps={[]}
