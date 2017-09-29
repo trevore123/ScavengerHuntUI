@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Circle from './Circle';
 import Line from './Line';
+import * as colors from './colors';
 
 let style = {
   display: 'flex',
@@ -11,13 +12,13 @@ let style = {
 
 function getColor(index, currentStep, skippedSteps, backgroundColor) {
   if(index > currentStep) {
-    return backgroundColor;
+    return colors.grey;
   } else if(index === currentStep) {
-    return '#FFFF00';
+    return colors.yellow;
   } else if(skippedSteps.includes(index)) {
-    return '#FF0000';
+    return colors.red;
   } else {
-    return '#00FF00';
+    return colors.green;
   }
 }
 

@@ -10,6 +10,7 @@ var circleStyle = {
   borderWidth: 3,
   borderStyle: 'solid',
   borderColor: '#000',
+  zIndex: 1,
 };
 
 class Circle extends Component {

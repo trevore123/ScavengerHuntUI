@@ -26,7 +26,7 @@ class TeamDisplay extends Component {
         <p>Red Team</p>
         <ProgressIndicator 
           style={indicatorStyle} 
-          backgroundColor="#393939" 
+          backgroundColor="#114144" 
           numberSteps={9} 
           currentStep={this.state.currentStep} 
           skippedSteps={[]}

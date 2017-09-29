@@ -6,7 +6,6 @@ let lineStyle = {
   backgroundColor: '#000',
   width: '100%',
   height: 3,
-  zIndex: -1,
 };
 
 class Line extends Component {
