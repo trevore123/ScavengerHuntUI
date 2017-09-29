@@ -4,7 +4,7 @@ import ProgressIndicator from './ProgressIndicator';
 import * as colors from './colors';
 
 let indicatorStyle = {
-  // 'width': '100%',
+  width: '80%'
 }
 
 class TeamDisplay extends Component {
@@ -24,7 +24,7 @@ class TeamDisplay extends Component {
 
   render() {
     return (
-      <div style={{...this.props.style, margin: 30}} onClick={this.incrementStep}>
+      <div style={{...this.props.style, margin: 30, display:'flex', width:'50%',   justifyContent: 'space-between'}} onClick={this.incrementStep}>
         <p>{this.props.teamName}</p>
         <ProgressIndicator
           style={indicatorStyle}

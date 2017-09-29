@@ -17,14 +17,14 @@ class App extends Component {
     for (let i = 0; i < 20; i++) {
       teams.push(<TeamDisplay
         style={{width: '35%'}}
-        teamName="#114144"
+        teamName="T-Raw"
         numberSteps={9} 
         currentStep={0} 
         skippedSteps={[]}
       />);
     }
     return (
-      <div className="App">
+      <div className="App" style={{}}>
         {/*<header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
