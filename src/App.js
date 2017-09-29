@@ -23,6 +23,7 @@ class App extends Component {
         <TeamDisplay 
           style={{'width': '35%'}} 
           backgroundColor="#114144" 
+          teamName="#114144"
           numberSteps={9} 
           currentStep={0} 
           skippedSteps={[]}

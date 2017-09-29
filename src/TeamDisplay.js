@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ProgressIndicator from './ProgressIndicator';
-import * as colors from './`colors';
+import * as colors from './colors';
 
 let indicatorStyle = {
   // 'width': '100%',
@@ -24,17 +25,24 @@ class TeamDisplay extends Component {
   render() {
     return (
       <div style={{...this.props.style}} onClick={this.incrementStep}>
-        <p>Red Team</p>
-        <ProgressIndicator 
-          style={indicatorStyle} 
+        <p>{this.props.teamName}</p>
+        <ProgressIndicator
+          style={indicatorStyle}
           backgroundColor={colors.blackBlue}
-          numberSteps={9} 
-          currentStep={this.state.currentStep} 
+          numberSteps={9}
+          currentStep={this.state.currentStep}
           skippedSteps={[]}
         />
       </div>
     );
   }
 }
+
+TeamDisplay.propTypes = {
+  teamName: PropTypes.string,
+  numberSteps: PropTypes.number,
+  currentStep: PropTypes.number,
+  skippedSteps: PropTypes.arrayOf(PropTypes.number),
+};
 
 export default TeamDisplay
