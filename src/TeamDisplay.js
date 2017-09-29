@@ -24,7 +24,7 @@ class TeamDisplay extends Component {
 
   render() {
     return (
-      <div style={{...this.props.style}} onClick={this.incrementStep}>
+      <div style={{...this.props.style, margin: 30}} onClick={this.incrementStep}>
         <p>{this.props.teamName}</p>
         <ProgressIndicator
           style={indicatorStyle}

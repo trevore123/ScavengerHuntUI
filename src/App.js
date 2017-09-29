@@ -12,7 +12,17 @@ socket.on('status-update', function(data) {
 });
 
 class App extends Component {
-  render() {  
+  render() { 
+    let teams = []
+    for (let i = 0; i < 20; i++) {
+      teams.push(<TeamDisplay
+        style={{width: '35%'}}
+        teamName="#114144"
+        numberSteps={9} 
+        currentStep={0} 
+        skippedSteps={[]}
+      />);
+    }
     return (
       <div className="App">
         {/*<header className="App-header">
@@ -20,14 +30,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>*/}
         <img src={logo} className="App-logo" alt="logo" />
-        <TeamDisplay 
-          style={{'width': '35%'}} 
-          backgroundColor="#114144" 
-          teamName="#114144"
-          numberSteps={9} 
-          currentStep={0} 
-          skippedSteps={[]}
-        />
+        {teams}
       </div>
     );
   }
