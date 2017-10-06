@@ -22,16 +22,21 @@ function getColor(index, currentStep, skippedSteps, backgroundColor) {
   }
 }
 
+function getOpacity(disabled) {
+  if(disabled) return 0.3;
+  else return 1;
+}
+
 class ProgressIndicator extends Component{
   render() {
     let circles = [];
     for (let i = 0; i < this.props.numberSteps; i++) {
       let color = getColor(i, this.props.currentStep, this.props.skippedSteps, this.props.backgroundColor);
-      circles.push(<Circle borderColor={this.props.backgroundColor} color={color}/>);
+      circles.push(<Circle borderColor={this.props.backgroundColor} color={color} backgroundColor={colors.blue}/>);
     }
 
     return (
-      <div style={{...style, ...this.props.style}}>
+      <div style={{...style, ...this.props.style, opacity:getOpacity(this.props.disabled)}}>
         {circles}
         <Line color={this.props.backgroundColor}/>
       </div>

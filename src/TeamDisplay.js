@@ -7,6 +7,13 @@ let indicatorStyle = {
   width: '80%'
 }
 
+var textStyle = {
+  margin: 10,
+  fontSize: '1.5em',
+  fontFamily: 'Papyrus, fantasy',
+  fontWeight: 'bold'
+}
+
 class TeamDisplay extends Component {
   constructor(props) {
     super(props);
@@ -24,14 +31,15 @@ class TeamDisplay extends Component {
 
   render() {
     return (
-      <div style={{...this.props.style, margin: 30, display:'flex', width:'50%',   justifyContent: 'space-between'}} onClick={this.incrementStep}>
-        <p>{this.props.teamName}</p>
+      <div style={{...this.props.style, background: 'rgba(237,212,149,0.6)', borderRadius:10, marginBottom: 10, display:'flex', justifyContent:'space-between', paddingLeft:10, paddingRight:10}} onClick={this.incrementStep}>
+        <p style={textStyle}>{this.props.teamName}</p>
         <ProgressIndicator
+          disabled={this.props.disabled}
           style={indicatorStyle}
-          backgroundColor={colors.blackBlue}
-          numberSteps={9}
-          currentStep={this.state.currentStep}
-          skippedSteps={[]}
+          backgroundColor={colors.brown}
+          numberSteps={this.props.numberSteps}
+          currentStep={this.props.currentStep}
+          skippedSteps={this.props.skippedSteps}
         />
       </div>
     );
